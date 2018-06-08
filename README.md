@@ -19,3 +19,13 @@ yarn
 ```bash
 npm start
 ```
+
+## Test
+
+```bash
+npm test
+```
+
+## Demo
+
+![Demo](assets/demo.gif)

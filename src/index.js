@@ -10,7 +10,7 @@ let lic = el('li', { key: 'c', style: 'color: orange' }, ['li#c'])
 let lif = el('li', { key: 'f', style: 'color: purple' }, ['li#f'])
 
 let oldTree = el('ul', { key: 'old' }, [lia, lib, lic, lid])
-let newTree = el('ul', { key: 'old' }, [lid, lia, lib, lic])
+let newTree = el('ul', { key: 'old' }, [lid, lie, lib, lic, lif])
 
 var root = oldTree.render()
 document.body.appendChild(root)
@@ -21,4 +21,4 @@ setTimeout(function() {
   console.log(patches)
   patch(root, patches)
   console.timeEnd('start')
-}, 1000)
+}, 2000)
