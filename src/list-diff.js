@@ -42,7 +42,7 @@ function listDiff(oldList, newList, key) {
   }
 
   var simulateList = children.slice(0)
-  console.log('children', children)
+
   // remove items no longer exist
   i = 0
   while (i < simulateList.length) {
@@ -53,7 +53,7 @@ function listDiff(oldList, newList, key) {
       i++
     }
   }
-  console.log('simulateList', simulateList)
+
   // i is cursor pointing to a item in new list
   // j is cursor pointing to a item in simulateList
   var j = (i = 0)
@@ -61,7 +61,7 @@ function listDiff(oldList, newList, key) {
     item = newList[i]
     itemKey = getItemKey(item, key)
 
-    var simulateItem = simulateList[i]
+    var simulateItem = simulateList[j]
     var simulateItemKey = getItemKey(simulateItem, key)
 
     if (simulateItem) {
