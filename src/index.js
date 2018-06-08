@@ -1,4 +1,3 @@
-import _ from './util'
 import diff from './diff'
 import patch from './patch'
 import el from './element'
@@ -16,13 +15,17 @@ let newTree = el('ul', { key: 'old' }, [lid, lia, lib, lic])
 var root = oldTree.render()
 document.body.appendChild(root)
 
-//setTimeout(function () {
-console.time('start')
-var patches = diff(oldTree, newTree)
-console.log(patches)
-patch(root, patches)
-console.timeEnd('start')
-//}, 1000)
+setTimeout(function() {
+  console.time('start')
+  var patches = diff(oldTree, newTree)
+  console.log(patches)
+  patch(root, patches)
+  console.timeEnd('start')
+}, 1000)
+
+/**
+ * test list-diff.js
+ */
 
 /* import { listDiff } from './list-diff'
 
